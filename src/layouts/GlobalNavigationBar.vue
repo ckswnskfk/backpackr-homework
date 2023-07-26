@@ -2,7 +2,7 @@
   <nav>
     <ul>
       <li><RouterLink to="/">Card List</RouterLink></li>
-      <li><RouterLink to="/input">Input Form</RouterLink></li>
+      <li><RouterLink to="/textareaForm">Input Form</RouterLink></li>
     </ul>
   </nav>
 </template>
