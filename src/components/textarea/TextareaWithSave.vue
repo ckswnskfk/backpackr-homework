@@ -3,11 +3,12 @@
     :max-input-length="maxInputLength"
     :default-message="defaultMessage"
     :disabled="disabled"
+    :read-only="readOnly"
     @input-changed="onTextWritten"
   >
   </CommonTextarea>
   <div class="text-area__btn">
-    <button class="text-area__btn--save" :class="{ disabled: isButtonDisabled }">저장</button>
+    <button class="text-area__btn--save" :class="{ disabled: isButtonDisabled }">Save</button>
   </div>
 </template>
 
@@ -19,10 +20,10 @@ interface Props {
   maxInputLength: number
   defaultMessage?: string
   disabled: boolean
+  readOnly: boolean
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const props = defineProps<Props>()
+defineProps<Props>()
 
 const isUserWritten = ref(false)
 const isButtonDisabled = computed(() => !isUserWritten.value)

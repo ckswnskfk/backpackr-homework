@@ -1,29 +1,27 @@
 <template>
   <section>
     <h2>Text Area Form</h2>
-    <div class="text-area">
+    <fieldset class="text-area">
       <TextareaWithSave
         :max-input-length="MAX_INPUT_LENGTH"
-        default-message=""
+        default-message="초기 메시지"
         :disabled="false"
+        :read-only="false"
       ></TextareaWithSave>
-    </div>
-    <div class="text-area">
-      <CommonTextarea
-        :max-input-length="MAX_INPUT_LENGTH"
-        default-message="기본메시지"
-        :disabled="true"
-      >
+    </fieldset>
+    <fieldset class="text-area">
+      <CommonTextarea :max-input-length="MAX_INPUT_LENGTH" :disabled="true" :read-only="false">
       </CommonTextarea>
-    </div>
-    <div class="text-area">
+    </fieldset>
+    <fieldset class="text-area">
       <CommonTextarea
         :max-input-length="MAX_INPUT_LENGTH"
-        default-message="기본메시지"
         :disabled="false"
+        :read-only="true"
+        default-message="읽기 전용입니다."
       >
       </CommonTextarea>
-    </div>
+    </fieldset>
   </section>
 </template>
 

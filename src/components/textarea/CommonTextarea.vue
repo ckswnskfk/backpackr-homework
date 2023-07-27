@@ -1,5 +1,5 @@
 <template>
-  <div class="text-area__item">
+  <div class="text-area__item" :class="{ readonly: readOnly }">
     <textarea
       :value="inputMessage"
       @input="handleInputChange"
@@ -7,8 +7,6 @@
       :maxlength="maxInputLength"
       :disabled="disabled"
       class="text-area__item--textarea"
-      cols="30"
-      wrap="hard"
     ></textarea>
     <em class="text-area__item--em">{{ countOfLeftCharacter }}</em>
   </div>
@@ -21,6 +19,7 @@ interface Props {
   maxInputLength: number
   defaultMessage?: string
   disabled: boolean
+  readOnly: boolean
 }
 
 const props = defineProps<Props>()
