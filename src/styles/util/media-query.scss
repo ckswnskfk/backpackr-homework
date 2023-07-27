@@ -1,0 +1,31 @@
+$wrap-width: 1056px;
+
+$desktop-width: $wrap-width;
+$desktop-max: $wrap-width;
+$tablet-width: 720px;
+$mobile-width: 360px;
+$iPhone4: 320px;
+
+@mixin iPhone4 {
+  @media (max-width: #{$iPhone4}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin limDesktop {
+  @media (min-width: #{$desktop-max}) {
+    @content;
+  }
+}
