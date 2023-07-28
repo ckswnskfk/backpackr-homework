@@ -1,6 +1,5 @@
 export interface CardItemProps {
   id: number
-  horizontal: boolean
   img: {
     path: string
     alt: string
