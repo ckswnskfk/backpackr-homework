@@ -1,35 +1,27 @@
-@use '../util/media-query.scss' as *;
-
-body {
-  margin: 50px;
-  // height: 0 auto;
-}
 .card-list {
-  background-color: blueviolet;
   display: flex;
-  // gap: 50px;
+  gap: 20px;
+
   .card {
     list-style: none;
-    // width: 20%;
-    width: 120px;
-    height: 240px;
-    background-color: pink;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #f9f9f9;
     border: 1px solid #e8e5e5;
-    // overflow: hidden;
-  }
-
-  .card.horizontal {
-    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
   }
 }
 
+.card:nth-child(-n + 3) {
+  width: 150px;
+}
+
+.card__group {
+  width: 100%;
+}
 .card__image {
-  display: block;
-  img {
-    border-radius: 5px 5px 0 0;
-  }
+  width: 100%;
 }
 
 .card__info {
@@ -68,90 +60,68 @@ body {
     overflow: hidden;
     font-size: 8px;
     color: #828282;
+    margin-top: 5px;
   }
 }
 
-// .a11yHidden {
-//   overflow: hidden;
-//   position: absolute !important;
-//   clip: rect(0, 0, 0, 0);
-//   clip-path: inset(50%);
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-// }
+.card-horizontal {
+  width: 450px;
+  display: flex;
+  margin: 100px 0px;
+  background-color: #f9f9f9;
+  border: 1px solid #e8e5e5;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
-// .card {
-//   display: flex;
-//   justify-content: space-between;
-//   /* background-color: pink; */
-//   width: 250px;
-//   gap: 10px;
-//   /* height: 500px; */
-//   /* text-align: center; */
-//   /* margin: 0 auto; */
-//   /* padding: 0px; */
-// }
-// .가로 {
-//   display: flex;
-//   justify-content: space-between;
-// }
+.card-horizontal__image--container {
+  a {
+    width: 150px;
+    height: 150px;
+    display: block;
+    background-color: #dd2a2a;
+  }
+  img {
+    display: block;
+    background-color: aquamarine;
+  }
+}
 
-// .cardFigure {
-//   /* height: 120px; */
-//   /* margin: auto; */
-//   /* padding: 0px; */
-// }
+.card-horizontal__info-container {
+  padding: 10px 20px;
 
-// .card img {
-//   width: 120px;
-//   /* height: 100%; */
-//   /* height: 0 auto; */
-//   /* background-color: tan; */
-//   border-radius: 2px 2px 0 0;
-// }
-// .cardContainer {
-//   background-color: #f9f9f9;
-//   border: 1px solid #e8e5e5;
-//   /* padding: 5px; */
-//   border-radius: 0 0 2px 2px;
-// }
-// .cardList {
-//   display: flex; /* 부모 요소 dl에 display: flex 적용 */
-//   flex-direction: column;
-//   padding: 5px;
-//   /* background-color: tan; */
-//   text-align: left;
-//   font-size: 10px;
-// }
-// .cardList dd {
-//   /* display: flex;  */
-//   /* flex-direction: row; */
-//   /* justify-content: space-around; */
-//   display: flex;
-//   flex-direction: row;
-//   /* margin: 5px; */
-// }
+  .card-horizontal__info {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .card-horizontal__review--desc {
+    overflow: hidden;
+    width: 230px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: 60px;
+    line-height: 20px;
+    margin: 10px 0px;
+    color: #828282;
+  }
 
-// .cardRating {
-//   /* background-color: yellow; */
-//   display: flex;
-//   flex-direction: column;
-//   height: 20px;
-//   overflow: hidden;
-//   text-align: left;
-//   font-size: 10px;
-//   border-top: 1px solid #e8e5e5;
-//   padding: 5px;
-// }
+  .card-horizontal__review--container {
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
 
-// .rating {
-//   color: rgb(249, 208, 1);
-// }
-
-// /* 가로 */
-// .cardContainer2 {
-//   width: 200px;
-//   height: 120px;
-//   /* background-color: pink; */
-// }
+    .card-horizontal__review--rating {
+      color: rgb(241, 225, 1);
+    }
+    .card-horizontal__review--separator {
+      color: #828282;
+    }
+    .card-horizontal__review--label {
+      color: #828282;
+    }
+  }
+}
