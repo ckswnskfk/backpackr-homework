@@ -29,10 +29,10 @@
 </template>
 
 <script setup lang="ts">
-import { type CardItemProps } from '@/types'
+import { type ProductInfoSimple } from '@/types'
 defineProps({
   item: {
-    type: Object as () => CardItemProps,
+    type: Object as () => ProductInfoSimple,
     required: true
   }
 })
