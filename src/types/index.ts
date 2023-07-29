@@ -1,1 +1,1 @@
-export type { CardItemProps } from './ui/index'
+export type { ProductInfoSimple } from './ui/index'
