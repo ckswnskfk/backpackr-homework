@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>Text Area Form</h2>
-    <form>
+    <form class="text-area__form">
       <fieldset class="text-area">
         <legend class="a11yHidden">Editable Text Area</legend>
         <TextareaWithSave

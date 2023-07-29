@@ -1,3 +1,10 @@
+@use './../util/mixin.scss' as *;
+
+.text-area__form {
+  @include flexbox($direction: column);
+  gap: 15px;
+}
+
 .text-area {
   display: flex;
   gap: 3px;
