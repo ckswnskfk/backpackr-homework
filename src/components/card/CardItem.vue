@@ -15,7 +15,7 @@
       </div>
       <div v-if="item.review" class="card__review--container">
         <div class="card__review--rating">
-          {{ showRating(item.review.rating) }}
+          <RatingScore :score="item.review.rating" />
         </div>
         <p v-if="item.review.desc" class="card__review--desc">
           {{ item.review.desc }}
@@ -27,26 +27,12 @@
 
 <script setup lang="ts">
 import { type ProductInfoSimple } from '@/types'
+import RatingScore from './RatingScore.vue'
+
 defineProps({
   item: {
     type: Object as () => ProductInfoSimple,
     required: true
   }
 })
-
-const showRating = (score: number) => {
-  const filledCircle = '●'
-  const emptyCircle = '○'
-  let result = ''
-
-  for (let i = 1; i <= 5; i++) {
-    if (i <= score) {
-      result += filledCircle
-    } else {
-      result += emptyCircle
-    }
-  }
-
-  return result
-}
 </script>
