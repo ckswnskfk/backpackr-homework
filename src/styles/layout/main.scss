@@ -1,26 +1,27 @@
 body {
-  margin: 0 auto;
+  margin: 0px auto;
   max-width: 1056px;
+  box-sizing: border-box;
 }
 
 h1 {
-  padding: 20px;
-  color: rgb(255, 81, 0);
+  padding: 20px 10px;
+  line-height: 150%;
+  color: #ff5100;
   font-size: 24px;
   font-weight: 700;
 }
 
 nav {
   background-color: #eadfc8;
-  border-radius: 10px;
-  margin: 0 auto;
-  max-width: 1056px;
+  border-radius: 5px;
 
   ul {
     font-weight: 700;
     display: flex;
-    padding: 20px;
-    gap: 20px;
+    line-height: 46px;
+    padding: 2px 20px;
+    gap: 25px;
     margin-bottom: 50px;
   }
 }

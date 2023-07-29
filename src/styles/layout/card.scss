@@ -1,6 +1,7 @@
 .card-list {
   display: flex;
   gap: 20px;
+  // padding-bottom: 50px;
 
   .card {
     list-style: none;
@@ -67,7 +68,7 @@
 .card-horizontal {
   width: 450px;
   display: flex;
-  margin: 100px 0px;
+  margin: 50px 0px;
   background-color: #f9f9f9;
   border: 1px solid #e8e5e5;
   border-radius: 5px;
