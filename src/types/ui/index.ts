@@ -1,4 +1,4 @@
-export interface CardItemProps {
+export interface ProductInfoSimple {
   id: number
   img: {
     path: string
