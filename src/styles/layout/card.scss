@@ -1,7 +1,6 @@
 .card-list {
   display: flex;
   gap: 20px;
-  // padding-bottom: 50px;
 
   .card {
     list-style: none;
@@ -18,7 +17,7 @@
   width: 150px;
 }
 
-.card__group {
+.card__info--container {
   width: 100%;
 }
 .card__image {

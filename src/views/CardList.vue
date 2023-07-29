@@ -24,6 +24,5 @@ const searchProducts = productStore.searchProducts
 
 onMounted(() => {
   searchProducts()
-  console.log(products.value)
 })
 </script>

@@ -3,7 +3,7 @@
     <a href="#"
       ><img src="@/assets/images/idus_icon_320.jpg" :alt="item.img.alt" class="card__image"
     /></a>
-    <div class="card__group">
+    <div class="card__info--container">
       <div class="card__info">
         <div class="card__info--label">{{ item.info.label }}</div>
         <div class="card__info--title">
