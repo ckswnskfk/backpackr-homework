@@ -1,5 +1,7 @@
+@use './../util/mixin.scss' as *;
+
 .card-list {
-  display: flex;
+  @include flexbox;
   gap: 20px;
 
   .card {
@@ -8,45 +10,37 @@
     background-color: #f9f9f9;
     border: 1px solid #e8e5e5;
     height: 100%;
+    width: 150px;
     border-radius: 5px;
     overflow: hidden;
   }
 }
 
-.card:nth-child(-n + 3) {
-  width: 150px;
-}
-
 .card__info--container {
-  width: 100%;
-}
-.card__image {
-  width: 100%;
-}
-
-.card__info {
-  border-radius: 0 0 2px 2px;
-  padding: 4px;
-  text-align: left;
-  .card__info--label {
-    color: #828282;
-    font-size: 10px;
-    font-weight: 50;
-  }
-  .card__info--title {
-    margin-top: 5px;
-  }
-  .card__info--hilight {
-    color: rgb(235, 36, 36);
-    margin-top: 15px;
-    font-size: 10px;
-    span {
-      text-decoration: line-through;
-      font-size: 7px;
+  .card__info {
+    padding: 4px;
+    text-align: left;
+    .card__info--label {
       color: #828282;
+      font-size: 10px;
+      font-weight: 50;
+    }
+    .card__info--title {
+      margin-top: 5px;
+    }
+    .card__info--hilight {
+      color: rgb(235, 36, 36);
+      margin-top: 15px;
+      font-size: 10px;
+      span {
+        text-decoration: line-through;
+        font-size: 7px;
+        color: #828282;
+      }
     }
   }
 }
+
 .card__review--container {
   border-top: 1px solid #e8e5e5;
   padding: 5px;
@@ -63,10 +57,10 @@
     margin-top: 5px;
   }
 }
-
+// 가로형
 .card-horizontal {
   width: 450px;
-  display: flex;
+  @include flexbox;
   margin: 50px 0px;
   background-color: #f9f9f9;
   border: 1px solid #e8e5e5;
@@ -79,11 +73,6 @@
     width: 150px;
     height: 150px;
     display: block;
-    background-color: #dd2a2a;
-  }
-  img {
-    display: block;
-    background-color: aquamarine;
   }
 }
 
@@ -111,7 +100,7 @@
 
   .card-horizontal__review--container {
     font-size: 14px;
-    display: flex;
+    @include flexbox;
     gap: 5px;
 
     .card-horizontal__review--rating {
