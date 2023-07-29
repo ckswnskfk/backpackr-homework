@@ -7,6 +7,7 @@
       :maxlength="maxInputLength"
       :disabled="disabled"
       class="text-area__item--textarea"
+      :readonly="readOnly"
     ></textarea>
     <em class="text-area__item--em">{{ countOfLeftCharacter }}</em>
   </div>
